@@ -9,6 +9,9 @@ export class NgclasesComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
   alert: string = 'alert-danger';
 
+  // tslint:disable-next-line:no-inferrable-types
+  loading: boolean = false;
+
   propiedades: Object = {
     danger: false
   };
@@ -16,6 +19,12 @@ export class NgclasesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ejecutar() {
+    this.loading = true;
+
+    setTimeout ( () => this.loading = false, 3000 );
   }
 
 }
